@@ -1,6 +1,6 @@
 # Projeto University_DB
 
-## Objetivo
+## Objetivo do projeto
 
 Este projeto tem como objetivo a criação de um banco de dados para a ficticia **Universidade U**. O banco de dados será desenvolvido para armazenar e organizar informações sobre alunos ativos e inativos, permitindo um gerenciamento mais eficiente da instituição.
 
