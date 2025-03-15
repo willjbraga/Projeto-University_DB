@@ -51,8 +51,8 @@ O banco de dados **University_DB** será composto por uma ou mais tabelas para a
 
 ---
 
-📌 **Autor:** willjbraga
-📅 **Data de Criação:** 15/03/2025
-📂 **Versão:** 1.0  
-🎯 **Nível de Dificuldade:** Baixo
+📌 **Autor:** willjbraga <br>
+📅 **Data de Criação:** 15/03/2025 <br>
+📂 **Versão:** 1.0  <br>
+🎯 **Nível de Dificuldade:** Muito Baixo <br>
 
