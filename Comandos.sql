@@ -121,3 +121,24 @@ UPDATE aluno SET cpf = '74102568930', email = 'camila_andrade85@outlook.com' WHE
 
 /*Definindo como chave primária natural a coluna CPF*/
 alter table aluno modify cpf varchar(14) primary key;
+
+/*Eliminando a Primary Key CPF para adicinar uma Primary Key Artificial idaluno auto incrementada*/
+alter table aluno drop cpf;
+alter table aluno add column cpf varchar(14);
+
+UPDATE aluno SET cpf = '94398550290' WHERE nome = 'Zé';
+UPDATE aluno SET cpf = '07073666400' WHERE nome = 'João';
+UPDATE aluno SET cpf = '03024898860' WHERE nome = 'Maria';
+UPDATE aluno SET cpf = '57918925270' WHERE nome = 'Josefa';
+UPDATE aluno SET cpf = '93701982960' WHERE nome = 'Carlos Silva';
+UPDATE aluno SET cpf = '91527420100' WHERE nome = 'Mariana Costa';
+UPDATE aluno SET cpf = '62894371580' WHERE nome = 'João Pedro Santos';
+UPDATE aluno SET cpf = '15746930250' WHERE nome = 'Ana Beatriz';
+UPDATE aluno SET cpf = '48205619730' WHERE nome = 'Eduardo Almeida';
+UPDATE aluno SET cpf = '69327804560' WHERE nome = 'Gabriela Moura';
+UPDATE aluno SET cpf = '82547391020' WHERE nome = 'Ricardo Lopes';
+UPDATE aluno SET cpf = '31985670240' WHERE nome = 'Fernanda Oliveira';
+UPDATE aluno SET cpf = '56829347110' WHERE nome = 'Thiago Pereira';
+UPDATE aluno SET cpf = '74102568930' WHERE nome = 'Camila Andrade';
+
+alter table aluno add column idaluno int primary key auto_increment;
