@@ -87,3 +87,37 @@ update aluno set ativo_sn = 0, valor_pago_curso = 700 where nome = 'Zé';
 /*Deletando dados da tabela aluno*/
 
 delete from aluno where idade in (30,29);
+
+/* Desc usado para descrever as colunas da tabela aluno*/
+desc aluno;
+
+/* Usando ALTER TABLE + ADD para adicinar novas colunas*/
+alter table aluno add cpf varchar(11);
+alter table aluno add email varchar(150) after idade;
+
+/*Usabdi ALTER TABLE + MODIFY para alterar a coluna já criada*/
+alter table aluno modify column cpf varchar(14);
+
+/*Removendo a  coluna cpf com ALTER TABLE + DROP COLUMN*/
+alter table aluno drop column cpf;
+
+alter table aluno add cpf varchar(14) after email;
+
+/*Criando um update para adicionar cpf e email*/
+UPDATE aluno SET cpf = '94398550290', email = 'zé63@yahoo.com' WHERE nome = 'Zé';
+UPDATE aluno SET cpf = '07073666400', email = 'joão49@gmail.com' WHERE nome = 'João';
+UPDATE aluno SET cpf = '03024898860', email = 'maria99@gmail.com' WHERE nome = 'Maria';
+UPDATE aluno SET cpf = '57918925270', email = 'josefa36@gmail.com' WHERE nome = 'Josefa';
+UPDATE aluno SET cpf = '93701982960', email = 'carlos_silva47@hotmail.com' WHERE nome = 'Carlos Silva';
+UPDATE aluno SET cpf = '91527420100', email = 'mariana_costa23@yahoo.com' WHERE nome = 'Mariana Costa';
+UPDATE aluno SET cpf = '62894371580', email = 'joao_pedro_santos77@outlook.com' WHERE nome = 'João Pedro Santos';
+UPDATE aluno SET cpf = '15746930250', email = 'ana_beatriz14@gmail.com' WHERE nome = 'Ana Beatriz';
+UPDATE aluno SET cpf = '48205619730', email = 'eduardo_almeida51@hotmail.com' WHERE nome = 'Eduardo Almeida';
+UPDATE aluno SET cpf = '69327804560', email = 'gabriela_moura99@outlook.com' WHERE nome = 'Gabriela Moura';
+UPDATE aluno SET cpf = '82547391020', email = 'ricardo_lopes28@yahoo.com' WHERE nome = 'Ricardo Lopes';
+UPDATE aluno SET cpf = '31985670240', email = 'fernanda_oliveira72@gmail.com' WHERE nome = 'Fernanda Oliveira';
+UPDATE aluno SET cpf = '56829347110', email = 'thiago_pereira63@hotmail.com' WHERE nome = 'Thiago Pereira';
+UPDATE aluno SET cpf = '74102568930', email = 'camila_andrade85@outlook.com' WHERE nome = 'Camila Andrade';
+
+/*Definindo como chave primária natural a coluna CPF*/
+alter table aluno modify cpf varchar(14) primary key;
