@@ -68,3 +68,22 @@ select * from aluno where idade between 40 and 60;
 /*Utilizando o Operador IN ou NOT IN*/
 select * from aluno where nome in ('Ana', 'Maria', 'Josefa');
 select * from aluno where nome not in ('Ana', 'Maria', 'Josefa');
+
+/*Selecionando dados utilizando o operador like*/
+select * from aluno where nome like 'm%a';
+select * from aluno where nome like '%a';
+select * from aluno where nome like '_oã_';
+select * from aluno where nome like '%d_';
+
+/*Usando ordenações de dados*/
+select * from aluno order by idade asc;
+select * from aluno order by idade desc;
+select * from aluno where idade between 30 and 40 order by idade desc;
+
+/*Usando o comando DML update para mudar o status ativo*/
+update aluno set ativo_sn = 1 where nome = 'Josefa';
+update aluno set ativo_sn = 0, valor_pago_curso = 700 where nome = 'Zé';
+
+/*Deletando dados da tabela aluno*/
+
+delete from aluno where idade in (30,29);
