@@ -142,3 +142,119 @@ UPDATE aluno SET cpf = '56829347110' WHERE nome = 'Thiago Pereira';
 UPDATE aluno SET cpf = '74102568930' WHERE nome = 'Camila Andrade';
 
 alter table aluno add column idaluno int primary key auto_increment;
+
+
+
+/*Decompondo  a coluna composta Endereço*/
+
+alter table aluno add logradouro varchar(100);
+alter table aluno add numero varchar(10);
+alter table aluno add complemento varchar(20);
+alter table aluno add bairro varchar(100);
+alter table aluno add cidade varchar(50);
+alter table aluno add estado varchar(2);
+
+
+update
+	aluno
+set
+	logradouro = 'Avenida Paulista',
+    numero = '1555',
+    complemento = 'ap225',
+    bairro = 'Bela Vista',
+    cidade = 'São Paulo',
+    estado = 'SP'
+where 
+	idaluno = 1;
+
+UPDATE aluno
+SET logradouro = 'Rua Bela Vista',
+    numero = '12',
+    complemento = '',
+    bairro = 'Boa Viagem',
+    cidade = 'Recife',
+    estado = 'PE'
+WHERE idaluno = 2;
+
+UPDATE aluno
+SET logradouro = 'Rua do Comércio',
+    numero = '88',
+    complemento = '',
+    bairro = 'Centro',
+    cidade = 'Florianópolis',
+    estado = 'SC'
+WHERE idaluno = 3;
+
+UPDATE aluno
+SET logradouro = 'Av. Goiás',
+    numero = '321',
+    complemento = '',
+    bairro = 'Setor Central',
+    cidade = 'Goiânia',
+    estado = 'GO'
+WHERE idaluno = 4;
+
+UPDATE aluno
+SET logradouro = 'Rua Abadias Nora',
+    numero = '20',
+    complemento = '',
+    bairro = 'Centro',
+    cidade = 'Belo Horizonte',
+    estado = 'MG'
+WHERE idaluno = 5;
+
+UPDATE aluno
+SET logradouro = 'Rua das Acácias',
+    numero = '90',
+    complemento = '',
+    bairro = 'Botafogo',
+    cidade = 'Rio de Janeiro',
+    estado = 'RJ'
+WHERE idaluno = 6;
+
+UPDATE aluno
+SET logradouro = 'Rua Central',
+    numero = '50',
+    complemento = '',
+    bairro = 'Centro',
+    cidade = 'Fortaleza',
+    estado = 'CE'
+WHERE idaluno = 7;
+
+UPDATE aluno
+SET logradouro = 'Rua Curitiba',
+    numero = '70',
+    complemento = '',
+    bairro = 'Centro',
+    cidade = 'Curitiba',
+    estado = 'PR'
+WHERE idaluno = 8;
+
+UPDATE aluno
+SET logradouro = 'Av. Principal',
+    numero = '777',
+    complemento = '',
+    bairro = 'Centro',
+    cidade = 'Manaus',
+    estado = 'AM'
+WHERE idaluno = 9;
+
+UPDATE aluno
+SET logradouro = 'Rua das Flores',
+    numero = '45',
+    complemento = '',
+    bairro = 'Savassi',
+    cidade = 'Belo Horizonte',
+    estado = 'MG'
+WHERE idaluno = 10;
+
+UPDATE aluno
+SET logradouro = 'Rua Crodovaldo',
+    numero = '1500',
+    complemento = 'ap525',
+    bairro = 'Centro',
+    cidade = 'São Paulo',
+    estado = 'SP'
+WHERE idaluno = 11;
+
+alter table aluno drop endereco;
